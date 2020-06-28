@@ -4,8 +4,6 @@ import cv2
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-# 2D
-# fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, device='cpu', flip_input=False)
 fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._3D, device='cpu', flip_input=False)
 input_ = io.imread('./abc.png')
 preds = fa.get_landmarks(input_)
@@ -26,11 +24,3 @@ fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.scatter(xx, yy, zz)
 plt.show()
-#cv2.imwrite('abc2.png', img)
-
-
-# 3D
-# fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._3D, flip_input=False)
-
-# input = io.imread('../test/assets/aflw-test.jpg')
-# preds = fa.get_landmarks(input)

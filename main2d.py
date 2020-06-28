@@ -21,9 +21,3 @@ cv2.imwrite('abc2.png', img)
 
 cv2.imshow('img', img)
 cv2.waitKey(0)
-
-# 3D
-# fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._3D, flip_input=False)
-
-# input = io.imread('../test/assets/aflw-test.jpg')
-# preds = fa.get_landmarks(input)
